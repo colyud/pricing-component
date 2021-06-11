@@ -7,6 +7,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -28,7 +29,6 @@ h1,
     margin: 0 auto;
     justify-content: center;
     max-width: 1000px;
-    position: relative;
 }
 
 .card {
@@ -40,34 +40,42 @@ h1,
     text-align: center;
     margin: 1em;
     padding: 1em 0.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
+    transition: all 0.3s ease-in-out;
 
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 .unselect {
-    opacity: 0.3;
+    opacity: 0.7;
 }
 .card-tiger {
     color: white;
     background-color: #003566;
 }
-.card-active {
+.select {
     transform: scale(1.3);
     z-index: 1;
 }
+.select p em {
+    color: #ffd60a;
+}
 .card h2 {
+    margin: 0;
+}
+.best {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
     margin: 0;
 }
 
 .card ul li {
     text-align: left;
     padding: 0 0 1em 0.5em;
-}
-
-.card ul li:last-child {
-    padding-bottom: 5em;
 }
 
 .card-cat ul li::marker {
@@ -84,19 +92,58 @@ h1,
 
 button {
     font-family: inherit;
-    position: absolute;
-    bottom: 0;
-    right: 20%;
     padding: 1em 2em;
     border: none;
     font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 1em;
     background-color: #ffd60a;
+    position: absolute;
+    bottom: 20px;
 }
-
 button:hover,
 button:focus {
     cursor: pointer;
     background-color: white;
+}
+.form-container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+.submit-form {
+    width: 20%;
+    height: 300px;
+    background-color: white;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    padding: 2em;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+img {
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+.submit-form * {
+    margin: 0;
+}
+.submit {
+    position: unset;
 }

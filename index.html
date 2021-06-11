@@ -20,7 +20,7 @@
                     <li>Friday treat</li>
                     <li>Monthly toy</li>
                 </ul>
-                <button>Sign up</button>
+                <button class="card-btn">Sign up</button>
             </div>
             <div class="card card-lion">
                 <h2>Lion Package</h2>
@@ -30,21 +30,35 @@
                     <li>Friday treat</li>
                     <li>Weekly biodegradable toy</li>
                 </ul>
-                <button>Sign up</button>
+                <button class="card-btn">Sign up</button>
             </div>
             <div class="card card-tiger">
                 <h2>Tiger Package</h2>
                 <p><em>£15.99/month</em></p>
+                <p class="best">(best seller)</p>
                 <ul>
                     <li>Delux food for the month</li>
                     <li>Friday treats and games</li>
                     <li>Weekly biodegradable toy</li>
                     <li>Pet insurance</li>
                 </ul>
-                <button>Sign up</button>
+                <button class="card-btn">Sign up</button>
             </div>
         </div>
-
+        <div class="form-container">
+            <form class="submit-form">
+                <h2 class="plan-name">plan</h2>
+                <p class="price">price</p>
+                <div class="plan-type">
+                    <input type="radio" name="type" id="monthly" checked />
+                    <label for="monthly">monthly</label>
+                    <input type="radio" name="type" id="annual" />
+                    <label for="annual">annual</label>
+                </div>
+                <img class="img" src="cat.jpg" alt="cat" />
+                <button class="submit">Ok</button>
+            </form>
+        </div>
         <script src="app.js"></script>
     </body>
 </html>
